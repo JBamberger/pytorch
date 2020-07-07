@@ -34,7 +34,7 @@ else
 fi
 
 # Clone the Pytorch branch
-retry git clone https://github.com/pytorch/pytorch.git "$PYTORCH_ROOT"
+retry git clone -b remove_arches https://github.com/seemethere/pytorch.git "$PYTORCH_ROOT"
 pushd "$PYTORCH_ROOT"
 if [[ -n "${CIRCLE_PR_NUMBER:-}" ]]; then
   # "smoke" binary build on PRs
